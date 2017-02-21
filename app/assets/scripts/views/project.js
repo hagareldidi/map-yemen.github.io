@@ -8,7 +8,7 @@ import { uniq } from 'lodash';
 import { getProject } from '../actions';
 import slugify from '../utils/slugify';
 import { formatDate, formatSimpleDate, parseProjectDate } from '../utils/date';
-import { tally, shortTally, pct, shortText, ontimeLookup, currency } from '../utils/format';
+import { tally, shortTally, pct, shortText, ontimeLookup, statusLanguage, currency } from '../utils/format';
 import { hasValidToken } from '../utils/auth';
 import { getProjectCentroids, getFeatureCollection } from '../utils/map-utils';
 import getLocation from '../utils/location';
@@ -186,7 +186,7 @@ var Project = React.createClass({
                 <dt className='inpage-meta__label visually-hidden'>Type</dt>
                 <dd className='inpage-meta__value inpage-meta__value--type'>{data.status[lang]}</dd>
                 <dt className='inpage-meta__label visually-hidden'></dt>
-                <dd className='inpage-meta__value inpage-meta__value--status'>{ontimeLookup[ontime]}</dd>
+                <dd className='inpage-meta__value inpage-meta__value--status'>{statusLanguage[ontime, lang]}</dd>
                 <dt className='inpage-meta__label'>{t.last_update_title}: </dt>
                 <dd className='inpage-meta__value'>&nbsp;{lastUpdated}</dd>
               </dl>

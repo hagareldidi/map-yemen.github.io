@@ -42,6 +42,11 @@ projects_list_view:
   sort_by_title: Sort by
   sort_option1: Alphabetical
 
+project_status:
+  status_ontime: On Time
+  status_delayed: Delayed
+  status_extended: Extended
+
 project_pages:
   print: Print
   status_label: "Status:"
